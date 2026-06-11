@@ -2,18 +2,29 @@
 
 
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: black;
+    padding-top: 100px;
 }
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100px;
-    margin-top: 0;
-    padding-top: 0;
+    background-color: black;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
-    padding-left: 30px;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 .logo-div{
     color: white;
@@ -106,6 +117,9 @@ header{
     justify-content: space-between;
     margin-left: 50px;
 }
+.right-div{
+    margin-top: 70px;
+}
 .first-div{
     color: rgb(187, 71, 237);
     width: 200px;
@@ -125,9 +139,40 @@ header{
     margin-top: 3px;
 }
 .left-div{
-    text-align: center;
+    position: relative;
+    width: 350px;
+    height: 350px;
     margin: 40px;
-    padding-right: 100px;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    position: absolute;
+    z-index: 10;
+    background: rgba(108, 135, 176, 0.411);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 10px;
+    width: 80px;
+    height: 60px;
+    animation: floatImage 5s ease-in-out infinite;
+}
+.card p{
+    z-index: 10;
+    margin: 0;
+    font-family: 14px;
+    color: rgb(107, 110, 108);
+}
+.experience{
+     top:0;
+    left: 260px;
+}
+.projects{
+    top: 250px;
+    right: 270px;
 }
 .image-div{
     width: 350px;
@@ -168,9 +213,15 @@ header{
     100%{
         transform: translateY(10px);
     }
-    }
+}
 
-    .hero-title {
+.experience h3{
+    color: #901ec5;
+}
+.projects h3{
+    color: #0577f2;
+}
+.hero-title {
     font-size: clamp(2rem, 4vw, 4rem); 
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -292,6 +343,7 @@ header{
     .menu-div ul li a:hover{
         box-shadow: 2px 3px 3px rgb(206, 151, 243);
     }
+    
     .first-div{
         padding-left: 10px;
         padding-top: 20px;
@@ -310,88 +362,7 @@ header{
 
     }
 }
-/* ===== 720px MOBILE FIX (YOUR SCREEN SIZE) ===== */
-@media (max-width: 720px) {
 
-    header {
-        padding: 10px 15px;
-        height: auto;
-        align-items: center;
-    }
-
-    .logo-div h3 {
-        font-size: 14px;
-    }
-
-    .menu-div {
-        position: absolute;
-        top: 70px;
-        right: 10px;
-        width: 220px;
-        height: auto;
-        padding: 15px;
-        background-color: rgb(63, 93, 132);
-        border-radius: 12px;
-        display: none; /* hidden until menu button click */
-        flex-direction: column;
-    }
-
-    .menu-div ul {
-        flex-direction: column;
-        gap: 15px;
-        padding: 0;
-    }
-
-    .menu-div ul li a {
-        font-size: 16px;
-        padding: 10px;
-        display: block;
-    }
-
-    .humberger-div {
-        display: block;
-    }
-
-    .home {
-        flex-direction: column-reverse;
-        align-items: center;
-        margin: 10px;
-    }
-
-    .right-div {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .hero-title {
-        font-size: 2.2rem;
-        line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .cta-buttons {
-        justify-content: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 250px;
-    }
-
-    .image-div {
-        width: 260px;
-        height: 260px;
-    }
-
-    .image {
-        width: 220px;
-        height: 220px;
-    }
-}
 @media(max-width: 480px){
     header{
         padding-left: 0;
@@ -415,19 +386,40 @@ header{
     }
     .menu-div{
         display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: -10%;
+        width: 89%;
+        height: 600px;
+        padding: 15px;
+        margin-left: 40px;
+        background-color: rgb(63, 93, 132);
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+        transition: all 0.5s;
     }
      .menu-div ul{
-        gap: 24px;
+        gap: 30px;
+    }
+    .menu-div ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        width: 80%;
+        text-align: center;
+
     }
     .image-div{
-        
-        width: 280px;
-        height: 280px;
+        margin-left: 10px;
+        width: 260px;
+        height: 260px;
     }
 
     .image{
-        width: 230px;
-        height: 230px;
+        width: 210px;
+        height: 210px;
     }
     .right-div{
         margin: 20px;
@@ -455,13 +447,49 @@ header{
     .btn{
         width: 70%;
     }
+    .experience{
+        top: 40px;
+        left: 240px;
+    }
+    .projects{
+        top: 260px;
+        left: 30px;
+    }
 }
 
 
 @media(max-width: 320px){
+      .menu-div{
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: -10%;
+        width: 85%;
+        height: auto;
+        padding: 15px;
+        margin-left: 40px;
+        background-color: rgb(63, 93, 132);
+        border-radius: 12px;
+        display: none; /* hidden until menu button click */
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+     .menu-div ul{
+        gap: 24px;
+    }
+    .menu-div ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        width: 70%;
+        text-align: center;
+
+    }
     .image-div{
         width: 280px;
         height: 280px;
+        margin-left: 15px;
     }
 
 .image{
@@ -470,15 +498,18 @@ header{
 }
 .first-div{
         padding-left: 30px;
-        padding-top: 20px;
+        padding-top: 10px;
         padding-right: 30px;
-        padding-bottom: 20px;
-        margin-left: 25px;
+        padding-bottom: 10px;
+        margin-left: 5px;
         width: 200px;
+    }
+    .first-div:hover{
+        transform: translateY(-15px);
     }
     .hero-title {
         margin-left: 10px;
-        font-size: clamp(1.5rem, 2vw, 3rem); 
+        font-size: clamp(1.3rem, 3vw, 2rem); 
     }
     .btn{
         margin-left: 10px;
