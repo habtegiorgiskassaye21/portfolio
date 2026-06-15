@@ -1,0 +1,695 @@
+
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    padding-top: 100px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    z-index: 1000;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.logo-div{
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.logo-div span{
+    background-color: rgb(164, 10, 241);
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    max-height: 40px;
+    width: 40px;
+}
+.logo-div span h2{
+    margin-top: 3px;
+}
+.logo-div h3{
+    padding-top: 8px;
+}
+.humberger-div{
+    display: none;
+}
+ .humberger-div .menu-btn{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 28px;
+    margin-top: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.menu-div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu-div ul{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-top: 20px;
+}
+.menu-div ul li{
+    list-style: none;
+}
+.menu-div ul li a{
+    border: none;
+    text-decoration: none;
+    background: transparent;
+    color: rgb(240, 241, 241);
+    font-size: large;
+}
+.menu-div ul li a:hover{
+    border: 1px solid rgb(8, 241, 210);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    background-color: #102740;
+    box-shadow: 2px 3px 3px rgb(120, 185, 190);
+}
+.btn-div button{
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: rgba(137, 43, 226, 0.63);
+    border: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-div button:hover{
+    font-weight: bolder;
+    font-size: 18px;
+    margin-right: 22px;
+    padding: 14px 25px;
+    box-shadow: 0 1px 10px rgb(143, 191, 152);
+    border: 1px solid rgb(170, 177, 172);
+    background-color: black;
+    color: rgb(6, 236, 109);
+}
+
+
+
+
+
+
+.home{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.right-div{
+    margin-left: 30px;
+    width: 45%;
+    margin-top: 70px;
+}
+.first-div{
+    color: rgb(187, 71, 237);
+    width: 200px;
+    height: 32px;
+    background-color: #7fbaf9;
+    border: 1px solid blue;
+    text-align: center;
+    border-radius: 9px;
+}
+.first-div:hover{
+    color: #0577f2;
+    background-color: rgb(16, 42, 46);
+    border: 1.5px solid rgb(255, 255, 255);
+    box-shadow: 1px 2px 3px rgb(84, 227, 252);
+}
+.first-div h3{
+    margin-top: 3px;
+}
+.left-div{
+    position: relative;
+    width: 45%;
+    height: 350px;
+    margin: 40px;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    position: absolute;
+    z-index: 10;
+    background: rgba(108, 135, 176, 0.411);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 15px;
+    padding: 10px;
+    width: 80px;
+    height: 60px;
+    animation: floatImage 5s ease-in-out infinite;
+}
+.card p{
+    z-index: 10;
+    margin: 0;
+    font-family: 14px;
+    color: rgb(107, 110, 108);
+}
+.experience{
+     margin-bottom: 180px;
+    left: 330px;
+}
+.left-div .projects{
+    top: 230px;
+    margin-left: -230px;
+}
+.left-div .image-div{
+    width: 320px;
+    height: 320px;
+    border: 3px dashed #4da3ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-div .image-div .image{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.left-div .image-div .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.image img:hover{
+    transform: scale(1.1);
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+.experience h3{
+    color: #901ec5;
+}
+.projects h3{
+    color: #0577f2;
+}
+.hero-title {
+    font-size: clamp(2rem, 4vw, 4rem); 
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #f1f1f4;
+}
+
+.highlight-purple {
+    color: #9281f7;
+}
+
+.highlight-blue {
+    color: #4da3ff;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #8f8ea3; 
+    max-width: 700px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.hero-subtitle strong {
+    color: #ffffff; 
+    font-weight: 600;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #635bff 0%, #a176ff 100%);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateX(5px);
+    box-shadow: 2px 5px 3px rgb(198, 198, 211);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #2d2b3d;
+}
+
+.btn-secondary:hover {
+    background-color: #02000c;
+    color: rgb(8, 216, 235);
+    border-color: #c2c0d4;
+    font-weight: bolder;
+    box-shadow: 2px 5px 3px rgb(100, 100, 195);
+    transform: translateX(5px);
+}
+
+
+
+.cards{
+    display: flex;
+    margin-top: 25px;
+    text-align: center;
+    align-items: center;
+    gap: 35px;
+}
+.divs{
+    padding-top: 3px;
+    margin: 0;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    width: 150px;
+    height: 80px;
+    background-color: #fdfdfe1d;    
+}
+
+.divs p{
+    margin-top: -6px;
+    color: white;
+}
+.divs h2{
+    margin-top: 6px;
+    color: rgb(142, 7, 227);
+}
+
+
+
+@media  (min-width: 768px) and (max-width: 834px) {
+    .humberger-div{
+        display: block;
+    }
+      .menu-div{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+
+        top: 100px;
+        left: 0;
+
+        width: 100%;
+        height: calc(100vh - 100px);
+
+        background-color: rgb(63,93,132);
+
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .menu-div ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-div ul li a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+    .menu-div .btn-div{
+        display: none;
+    }
+    .home{
+        margin-left: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .home .left-div{
+        width: 80%;
+        padding: 10px;
+    }
+    .home .right-div{
+        width: 90%;
+    }
+    .menu-div ul li a:hover{
+        box-shadow: 2px 3px 3px rgb(206, 151, 243);
+    }
+    
+    .first-div{
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        margin-left: 10px;
+        width: 60%;
+    }
+    .hero-title {
+        margin-left: 10px;
+        font-size: clamp(1.5rem, 2vw, 3rem); 
+    }
+    .btn{
+        width: 30%;
+        margin-right: 0;
+
+    }
+
+    .cards{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .divs{
+        width: 120px;
+    }
+
+
+    .experience{
+        width: 100px;
+        height: 60px;
+        padding: 35px;
+        font-size: 22px;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 250px;
+        left: 380px;
+    }
+    .left-div .projects{
+                width: 100px;
+        height: 60px;
+        padding: 35px;
+        font-size: 22px;
+        text-align: center;
+        align-items: center;
+        margin-left: -50px;
+        right: 390px;
+    }
+.left-div .image-div{
+    width: 380px;
+    height: 380px;
+    border: 3px dashed #4da3ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-div .image-div .image{
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.left-div .image-div .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+}
+
+@media(max-width: 767px){
+    .humberger-div{
+        display: block;
+    }
+
+    .menu-div{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        margin-top: 90px;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100px);
+
+        background-color: rgb(63,93,132);
+
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 999;
+    }
+
+    .menu-div ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .menu-div ul li{
+        width: 100%;
+    }
+
+    .menu-div ul li a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .menu-div.active{
+        display: flex;
+    }
+    .menu-div .btn-div{
+        display: none;
+    }
+
+    .home{
+        margin-left: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .home .left-div{
+        width: 80%;
+        padding: 10px;
+    }
+    .home .right-div{
+        width: 90%;
+    }
+    .menu-div ul li a:hover{
+        box-shadow: 2px 3px 3px rgb(206, 151, 243);
+    }
+    
+    .first-div{
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        margin-left: 10px;
+        width: 60%;
+    }
+    .hero-title {
+        margin-left: 10px;
+        font-size: clamp(1.5rem, 2vw, 3rem); 
+    }
+    .btn{
+        width: 30%;
+        margin-right: 0;
+
+    }
+
+    .cards{
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .divs{
+        width: 120px;
+    }
+
+    .experience{
+        margin-bottom: 180px;
+        left: 330px;
+    }
+    .left-div .projects{
+        margin-left: 10px;
+    }
+    .left-div .image-div{
+    width: 300px;
+    height: 300px;
+}
+
+.left-div .image-div .image{
+    width: 260px;
+    height: 260px;
+}
+}
+
+@media(max-width: 480px){
+    header{
+        padding-left: 0;
+    }
+    .home{
+        width: 100%;
+        flex-direction: column-reverse;
+         margin: 0;
+    }
+    .home .left-div{
+        width: 80%;
+    }
+    .experience{
+        margin-left: -60px;
+    }
+    .btn{
+        width: 80%;
+    }
+     .hero-title{
+        font-size: 2rem;
+    }
+
+    .hero-subtitle{
+        font-size: 1rem;
+    }
+    .humberger-div{
+        display: block;
+    }
+    .menu-div{
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: -10%;
+        width: 89%;
+        height: calc(100vh - 100px);
+
+        padding: 15px;
+        margin-left: 40px;
+        background-color: rgb(63, 93, 132);
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+        transition: all 0.5s;
+    }
+     .menu-div ul{
+        gap: 10px;
+    }
+    .menu-div ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+        width: 80%;
+        text-align: center;
+
+    }
+
+    .left-div .image-div{
+        width: 280px;
+        height: 280px;
+    }
+
+    .left-div .image-div .image{
+        width: 260px;
+        height: 260px;
+    }
+    .right-div{
+        margin: 20px;
+    }
+
+    .left-div{
+        padding-left: 0;
+        margin-left: 25px;
+    }
+    .first-div{
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        margin-left: 10px;
+        width: 80%;
+    }
+    .hero-title {
+        margin-left: 10px;
+        font-size: clamp(1.5rem, 2vw, 3rem); 
+    }
+    .btn{
+        width: 70%;
+    }
+    .experience{
+        top: 40px;
+        left: 240px;
+    }
+    .projects{
+        top: 260px;
+        left: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
